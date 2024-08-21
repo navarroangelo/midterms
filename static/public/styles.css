@@ -1,0 +1,40 @@
+.alert {
+    width: 50vw;
+    height: 50vh;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.navbar {
+    background-color: #373A40;
+}
+
+a.navbar-brand {
+    color: #DC5F00;
+}
+
+a {
+    color: #EEEEEE;
+}
+
+body {
+    background-color: #686D76;
+}
+
+div.alert {
+    background-color: #EEEEEE;
+}
+
+img.rounded {
+    width: 30vw;
+    margin-top: 2em;
+}
