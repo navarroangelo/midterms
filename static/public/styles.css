@@ -1,44 +1,96 @@
 .alert {
-    width: 50vw;
-    height: 100vh;
-    margin-top: 5rem;
-    margin-left: auto;
-    margin-right: auto;
+  width: 60vw;
+  height: 50vh;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: #373a40;
+  border-color: #373a40;
+}
+
+.alert-success hr {
+  border-top-color: #373a40;
+}
+
+#infoForm {
+  height: 70rem;
 }
 
 h4 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 p {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .navbar {
-    background-color: #373A40;
+  background-color: #373a40;
 }
 
 a.navbar-brand {
-    color: #DC5F00;
+  color: #dc5f00;
 }
 
 a {
-    color: #EEEEEE;
+  color: #eeeeee;
 }
 
 body {
-    background-color: #686D76;
+  background-color: #686d76;
 }
 
 div.alert {
-    background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
 
 img.rounded {
-    width: 30vw;
-    margin-top: 2em;
+  width: 15vw;
+  margin-top: 2em;
 }
 
 p {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+/* FORM STYLES */
+form {
+  width: 56vw;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input[type="submit"] {
+  background-color: #dc5f00;
+  color: #eeeeee;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #c44c00;
+}
+
+label {
+  font-weight: 500;
+}
+
+.multi {
+  font-weight: normal;
 }
