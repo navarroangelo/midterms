@@ -94,3 +94,33 @@ label {
 .multi {
   font-weight: normal;
 }
+
+/* UPLOAD */
+#uploadForm {
+  width: 60vw;
+  height: 50vh;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: #373a40;
+  border-color: #373a40;
+  background-color: #eeeeee; /* Added background color */
+}
+
+#title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#subtitle {
+  font-size: 1.5rem;
+}
+
+#text {
+  /* center items in this div */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

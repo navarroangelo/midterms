@@ -132,6 +132,40 @@ app.post("/formPost", urlencodedparser, (req, res) => {
   res.end(htmlPost);
 });
 
+// IMPORT STATEMENTS FOR PATH, MIME TYPES, AND MULTER
+const path = require("path");
+const mime = require("mime-types");
+
+// MULTER TO SUPPORT FILE UPLOADS
+const fileStorage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "uploads/");
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.originalname);
+  },
+});
+
+const upload = multer({ storage: fileStorage });
+
+// MULTER UPLOAD ROUTE
+app.post("/uploads", upload.single("file"), (req, res) => {
+  console.log(req.file);
+
+  req.file.mimetype = mime.lookup(req.file.originalname);
+
+  if (req.file.mimetype === "text/plain") {
+    res.sendFile(path.join(__dirname, "public", "file-uploaded.html"));
+  } else {
+    res.sendFile(path.join(__dirname, "public", "file-error.html"));
+  }
+});
+
+// ROUTE TO UPLOAD
+app.get("/file-upload", (req, res) => {
+  res.sendFile(path.join(__dirname + "/" + "file-upload.html"));
+});
+
 const port = process.env.PORT || 4001;
 app.listen(port, () => {
   console.log(`Listening at Port ${port}`);
